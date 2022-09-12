@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <table class="main-table">
+        <tr>
+            <td class="header" colspan="2">
+                Isupov Denis Vasilievich<br>
+                P32121<br>
+                Variant: 1214
+            </td>
+        </tr>
+        <tr>
+            <td id="canvas">
+                <canvas id="graphics" width="300" height="300">Ошибка!</canvas>
+            </td>
+            <td id="form">
+                <form onsubmit="return false;" method="get">
+                    <table class="form">
+                        <tr>
+                            <td>
+                                <label>X</label>
+                            </td>
+                            <td colspan="3">
+                                <input type="radio" id="x-4" name="X" value="-4">
+                                <label for="x-4" class="radio-label">-4</label>
+                                <input type="radio" id="x-3" name="X" value="-3">
+                                <label for="x-3" class="radio-label">-3</label>
+                                <input type="radio" id="x-2" name="X" value="-2">
+                                <label for="x-2" class="radio-label">-4</label>
+                                <input type="radio" id="x-1" name="X" value="-1">
+                                <label for="x-1" class="radio-label">-1</label>
+                                <input type="radio" id="x0" name="X" value="0" checked>
+                                <label for="x0" class="radio-label">0</label>
+                                <input type="radio" id="x1" name="X" value="1">
+                                <label for="x1" class="radio-label">1</label>
+                                <input type="radio" id="x2" name="X" value="2">
+                                <label for="x2" class="radio-label">2</label>
+                                <input type="radio" id="x3" name="X" value="3">
+                                <label for="x3" class="radio-label">3</label>
+                                <input type="radio" id="x4" name="X" value="4">
+                                <label for="x4" class="radio-label">4</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Y</label>
+                            </td>
+                            <td>
+                                <input type="text" name="Y" class="inputY" maxlength="12">
+                            </td>
+                            <td>
+                                <label>R</label>
+                            </td>
+                            <td>
+                                <select name="R" class="inputR">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5" selected>5</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="submit-button" disabled style="--clr:#6eff3e" onclick="answer()"><span>check</span><i></i></button>
+                    <button style="--clr:#ff1867" type="reset"><span>reset</span><i></i></button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table id="results">
+                    <thead>
+                    <tr>
+                        <td style="--wdt:20%">Point</td>
+                        <td style="--wdt:20%">Radius</td>
+                        <td style="--wdt:20%">Current time</td>
+                        <td style="--wdt:20%">Execution time</td>
+                        <td style="--wdt:20%">Result</td>
+                    </tr>
+                    </thead>
+                    <tbody id="resultss">
+
+                    </tbody>
+                </table>
+                <button style="--clr:#1e9bff" onclick="clearTable()"><span>clear</span><i></i></button>
+            </td>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/answer.js"></script>
+    <script src="js/drawer.js"></script>
+    <script src="js/validate.js"></script>
+</body>
+</html>

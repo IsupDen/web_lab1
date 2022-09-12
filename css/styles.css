@@ -1,0 +1,202 @@
+body
+{
+    background: #28272a;
+}
+table
+{
+    margin: auto;
+    border-collapse: collapse;
+}
+.main-table
+{
+    width: 100%;
+    text-align: center;
+
+}
+.main-table td, .main-table tr
+{
+    padding: 5px;
+}
+.header
+{
+    color: #fff;
+    font-weight: 100;
+    font-family: fantasy;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+button:enabled, select
+{
+    cursor: pointer;
+}
+button
+{
+    margin: 10px;
+    background: #444;
+    color: #fff;
+    border-width: 0;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+
+}
+button:enabled:hover
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+button::before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #28272a;
+}
+button span
+{
+    position: relative;
+    z-index: 1;
+}
+button i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+button i::before
+{
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 5px;
+    background: #28272a;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+button:enabled:hover i::before
+{
+    left: 20%;
+    width: 20px;
+}
+button i::after
+{
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 5px;
+    background: #28272a;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+button:enabled:hover i::after
+{
+    width: 20px;
+    left: 80%;
+}
+#results {
+    min-width: 800px;
+    width: 70%;
+    box-shadow: 0 0 10px #1e9bff;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+#results thead tr
+{
+    background: #1e9bff;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+#results thead td
+{
+    width: var(--wdt);
+}
+#results tbody tr
+{
+    color: #fff;
+    text-align: left;
+}
+#results td, #results tr
+{
+    padding: 12px 15px;
+}
+#results tbody tr:nth-of-type(even)
+{
+    background: #164b72;
+}
+#results tbody tr:nth-of-type(even):hover
+{
+    background: #1d5e91;
+    font-weight: bold;
+}
+#results tbody tr:nth-of-type(odd):hover
+{
+    background: #353438;
+    font-weight: bold;
+}
+.form
+{
+    color: #fff;
+    align-items: center;
+}
+
+input[type=radio]
+{
+    position: absolute;
+    opacity: 0;
+}
+input[type=radio] + .radio-label:before
+{
+    content: '';
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid #a9a9a9;
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    position: relative;
+    top: -0.2em;
+    transition: all 250ms ease;
+    vertical-align: top;
+
+  }
+input[type=radio]:checked + .radio-label:before
+{
+    background-color: #6eff3e;
+    box-shadow: inset 0 0 0 4px #fff;
+ }
+input[type=radio]:focus + .radio-label:before
+{
+    outline: none;
+    border-color: #6eff3e;
+ }
+input[type=radio]:disabled + .radio-label:before
+{
+    box-shadow: inset 0 0 0 4px #fff;
+    border-color: #a9a9a9;
+    background: #a9a9a9;
+ }
+input[type=radio] + .radio-label:empty:before
+{
+    margin-right: 0;
+}
+
+#canvas, #form
+{
+    width: 50%;
+}
+
+
+
