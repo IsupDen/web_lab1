@@ -25,7 +25,7 @@ $start = microtime(true);
 $r = $_GET["r"];
 $x = $_GET["x"];
 $y = $_GET["y"];
-if (!is_numeric($x) || !is_numeric($y) || !is_numeric($r) || strlen($x) > 10 || strlen($y) > 10 || strlen($r) > 10) {
+if (!is_numeric($x) || !is_numeric($y) || !is_numeric($r) || strlen($x) > 10 || strlen($y) > 12 || strlen($r) > 12) {
     http_response_code(400);
     die();
 }
