@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <style>
         body
         {
@@ -219,7 +220,7 @@
                 <canvas id="graphics" width="300" height="300">Ошибка!</canvas>
             </td>
             <td id="form">
-                <form onsubmit="return false;">
+                <form id="input-form" onsubmit='return false;'>
                     <table class="form">
                         <tr>
                             <td>
@@ -251,7 +252,7 @@
                                 <label>Y</label>
                             </td>
                             <td>
-                                <input type="text" placeholder="(-5;5)" name="Y" class="inputY" id="inputY" maxlength="12">
+                                <input type="number" required step="0.00001" max="5" min="-5" placeholder="(-5;5)" name="Y" class="inputY" id="inputY" maxlength="12">
                             </td>
                             <td>
                                 <label>R</label>
